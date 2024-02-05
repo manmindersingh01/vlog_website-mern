@@ -6,13 +6,13 @@ import SighIn from './pages/SighIn';
 import SignUp from './pages/SignUp';
 import Dashboard from './pages/Dashboard';
 import Projects from './pages/Projects';
-
+import Header from './components/Header';
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <BrowserRouter>
-
+      <Header></Header>
       <Routes>
 
         <Route path='/' element={<Home />} />
