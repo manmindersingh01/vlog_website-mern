@@ -1,1 +1,1 @@
-## mern vlog website with tailwind css
+## mern blog website with tailwind css
