@@ -21,10 +21,17 @@ export const signup = async (req, res, next) => {
     await newUser.save();
     res.json({
       msg: "User created"
+
     })
   } catch (error) {
     next(error);
   }
 
 
-} 
+}
+
+export const signin = async (req, res, next) => {
+  const { email, password } = req.body;
+  alert(email);
+
+}

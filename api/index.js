@@ -9,6 +9,7 @@ import authRoutes from './routes/auth.route.js'
 import userRoutes from './routes/user.route.js'
 
 
+
 dotenv.config();
 mongoose.connect(process.env.MONGO).then(
   () => {
@@ -22,6 +23,7 @@ mongoose.connect(process.env.MONGO).then(
 app.use(express.json());
 app.use('/api/user', userRoutes);
 app.use('/api/auth', authRoutes);
+
 app.use((err, req, res, next) => {
   const statusCode = err.statusCode || 500;
   const message = err.message || 'internal error';
